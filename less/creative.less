@@ -1,6 +1,5 @@
 @import "variables.less";
 @import "mixins.less";
-
 // Global Components
 html,
 body {
@@ -72,7 +71,6 @@ aside {
 }
 
 // Navigation
-
 .navbar-default {
     background-color: white;
     border-color: fade(@gray-darker, 5%);
@@ -158,7 +156,6 @@ aside {
 }
 
 // Homepage Header
-
 header {
     position: relative;
     width: 100%;
@@ -220,7 +217,6 @@ header {
 }
 
 // Sections
-
 .section-heading {
     margin-top: 0;
 }
@@ -307,17 +303,21 @@ header {
 }
 
 .no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 // Button Styles
 .btn-default {
-    .button-variant(@gray-darker;white;white);
+    .button-variant(@gray-darker;
+    white;
+    white);
 }
 
 .btn-primary {
-    .button-variant(white;@theme-primary;@theme-primary);
+    .button-variant(white;
+    @theme-primary;
+    @theme-primary);
 }
 
 .btn {
@@ -358,4 +358,24 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: @gray-darker;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: #384148;
+    opacity: 0.7;
+}
+
+.header-content {
+    z-index: 10;
+}
+
+.profile {
+    radius: 100%;
 }
